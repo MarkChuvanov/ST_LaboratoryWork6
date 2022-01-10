@@ -12,7 +12,14 @@ namespace ST_LaboratoryWork6
 		[SetUp]
 		public void Init ()
 		{
-			driver = new ChromeDriver();
+			ChromeOptions options = new();
+			options.AddArguments("start-maximized");
+			options.AddArguments("disable-infobars");
+			options.AddArguments("--disable-extensions");
+			options.AddArguments("--disable-gpu");
+			options.AddArguments("--disable-dev-shm-usage");
+			options.AddArguments("--no-sandbox");
+			driver = new ChromeDriver(options);
 			driver.Navigate().GoToUrl("https://www.championat.com/");
 		}
 
