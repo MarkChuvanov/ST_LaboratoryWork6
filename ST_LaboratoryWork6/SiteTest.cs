@@ -14,12 +14,7 @@ namespace ST_LaboratoryWork6
 		{
 			ChromeOptions options = new();
 			options.AddArguments("start-maximized");
-			options.AddArguments("disable-infobars");
-			options.AddArguments("--disable-extensions");
-			options.AddArguments("--disable-gpu");
-			options.AddArguments("--disable-dev-shm-usage");
-			options.AddArguments("--no-sandbox");
-			driver = new ChromeDriver(options);
+			driver = new ChromeDriver();
 			driver.Navigate().GoToUrl("https://www.championat.com/");
 		}
 
