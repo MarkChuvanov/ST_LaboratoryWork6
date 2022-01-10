@@ -1,23 +1,25 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 
 namespace ST_LaboratoryWork6
 {
 	[TestFixture]
 	class SiteTest
 	{
-		private IWebDriver driver;
+		private WebDriver driver;
 
 		[SetUp]
-		public void Init () => driver = new OpenQA.Selenium.Chrome.ChromeDriver
+		public void Init ()
 		{
-			Url = "https://www.championat.com/"
-		};
+			driver = new ChromeDriver();
+			driver.Navigate().GoToUrl("https://www.championat.com/");
+		}
 
 		[Test]
 		public void ExistsPage ()
 		{
-			driver.Url = "https://www.championat.com/tennis/_atp/tournament/79338/grid/";
+			driver.Navigate().GoToUrl("https://www.championat.com/tennis/_atp/tournament/79338/grid/");
 			Assert.IsTrue(driver.Title.Contains("404"));
 		}
 
