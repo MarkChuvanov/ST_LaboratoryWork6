@@ -9,13 +9,10 @@ namespace ST_LaboratoryWork6
 		private IWebDriver driver;
 
 		[SetUp]
-		public void Init ()
+		public void Init () => driver = new OpenQA.Selenium.Chrome.ChromeDriver
 		{
-			driver = new OpenQA.Selenium.Chrome.ChromeDriver
-			{
-				Url = "https://www.championat.com/"
-			};
-		}
+			Url = "https://www.championat.com/"
+		};
 
 		[Test]
 		public void ExistsPage ()
