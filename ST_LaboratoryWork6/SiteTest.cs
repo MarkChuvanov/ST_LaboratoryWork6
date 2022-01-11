@@ -43,7 +43,7 @@ namespace ST_LaboratoryWork6
 		[Test]
 		public void FollowLink ()
 		{
-			driver.FindElement(By.ClassName("header-menu-item__link")).Click();
+			driver.FindElements(By.ClassName("header-menu-item__link"))[4].Click();
 			Assert.IsTrue(driver.Title.Contains("Теннис"));
 		}
 
