@@ -14,6 +14,8 @@ namespace ST_LaboratoryWork6
 		{
 			ChromeOptions options = new();
 			options.AddArguments("start-maximized");
+			options.AddArgument("--headless");
+			options.AddArgument("--no-sandbox");
 			driver = new ChromeDriver();
 			driver.Navigate().GoToUrl("https://www.championat.com/");
 		}
