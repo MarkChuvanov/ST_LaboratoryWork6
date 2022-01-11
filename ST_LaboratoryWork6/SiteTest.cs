@@ -15,7 +15,7 @@ namespace ST_LaboratoryWork6
 			ChromeOptions options = new();
 			options.AddArgument("--headless");
 			options.AddArgument("--no-sandbox");
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(options);
 			driver.Navigate().GoToUrl("https://www.championat.com/");
 		}
 
