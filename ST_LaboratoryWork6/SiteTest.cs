@@ -43,8 +43,8 @@ namespace ST_LaboratoryWork6
 		[Test]
 		public void FollowLink ()
 		{
-			driver.FindElement(By.LinkText("Теннис")).Click();
-			Assert.IsTrue(driver.Title.Contains("Теннис"));
+			driver.FindElement(By.LinkText("Tennis")).Click();
+			Assert.IsTrue(driver.Title.Contains("Tennis"));
 		}
 
 		[TearDown]
